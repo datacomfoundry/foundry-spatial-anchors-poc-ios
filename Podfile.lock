@@ -1,0 +1,35 @@
+PODS:
+  - ADAL (2.7.7):
+    - ADAL/app-lib (= 2.7.7)
+  - ADAL/app-lib (2.7.7):
+    - ADAL/tokencacheheader
+  - ADAL/tokencacheheader (2.7.7)
+  - AzureSpatialAnchors (2.2.1)
+
+DEPENDENCIES:
+  - ADAL (from `https://github.com/AzureAD/azure-activedirectory-library-for-objc`, tag `2.7.7`)
+  - AzureSpatialAnchors (= 2.2.1)
+
+SPEC REPOS:
+  trunk:
+    - AzureSpatialAnchors
+
+EXTERNAL SOURCES:
+  ADAL:
+    :git: https://github.com/AzureAD/azure-activedirectory-library-for-objc
+    :submodules: true
+    :tag: 2.7.7
+
+CHECKOUT OPTIONS:
+  ADAL:
+    :git: https://github.com/AzureAD/azure-activedirectory-library-for-objc
+    :submodules: true
+    :tag: 2.7.7
+
+SPEC CHECKSUMS:
+  ADAL: 9e3c223a31c61200e7c2e22e6beebee7b4d16991
+  AzureSpatialAnchors: 87137da25b6b8bc5a92c7620b391a8d6c32fdce4
+
+PODFILE CHECKSUM: 842676af4bd835a21ad82697b7f3afb61beed54a
+
+COCOAPODS: 1.9.3
