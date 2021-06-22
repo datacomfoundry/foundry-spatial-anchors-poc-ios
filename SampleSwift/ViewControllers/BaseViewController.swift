@@ -17,12 +17,15 @@ let failedColor = UIColor.red.withAlphaComponent(0.6)           // red when ther
 let unsavedAnchorId = "placeholder-id"
 
 class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAnchorSessionDelegate {
-    
-    // Set this to the account ID provided for the Azure Spatial Service resource.
+
+    // Set this string to the account ID provided for the Azure Spatial Anchors account resource.
     let spatialAnchorsAccountId = "8ff3a5b2-a387-4100-a0b4-3002ef8651a1"
-    
-    // Set this to the account key provided for the Azure Spatial Service resource.
+
+    // Set this string to the account key provided for the Azure Spatial Anchors account resource.
     let spatialAnchorsAccountKey = "guEVDUlRiWybp0zW2wcbLqsucXiHkT9XBzdVJ37s3eI="
+
+    // Set this string to the account domain provided for the Azure Spatial Anchors account resource.
+    let spatialAnchorsAccountDomain = "australiaeast.mixedreality.azure.com"
 
     @IBOutlet var sceneView: ARSCNView!
 
@@ -98,10 +101,10 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
 
         layoutButtons()
         
-        if (spatialAnchorsAccountId == "Set me" || spatialAnchorsAccountKey == "Set me") {
+        if (spatialAnchorsAccountId == "Set me" || spatialAnchorsAccountKey == "Set me" || spatialAnchorsAccountDomain == "Set me") {
             mainButton.isHidden = true
             errorControl.isHidden = false
-            showLogMessage(text: "Set spatialAnchorsAccountId and spatialAnchorsAccountKey in BaseViewController.swift", here: errorControl)
+            showLogMessage(text: "Set spatialAnchorsAccountId, spatialAnchorsAccountKey and spatialAnchorsAccountDomain in BaseViewController.swift", here: errorControl)
         }
         else {
             // Start the demo
@@ -217,12 +220,12 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
     
     func startSession() {
         cloudSession = ASACloudSpatialAnchorSession()
-        cloudSession!.configuration.accountDomain = "australiaeast.mixedreality.azure.com";
         cloudSession!.session = sceneView.session
         cloudSession!.logLevel = .information
         cloudSession!.delegate = self
         cloudSession!.configuration.accountId = spatialAnchorsAccountId
         cloudSession!.configuration.accountKey = spatialAnchorsAccountKey
+        cloudSession!.configuration.accountDomain = spatialAnchorsAccountDomain
         cloudSession!.start()
         
         feedbackControl.isHidden = false
@@ -261,7 +264,6 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
         
         cloudSession!.createAnchor(cloudAnchor, withCompletionHandler: { (error: Error?) in
             if let error = error {
-                print("error: \(error)")
                 DispatchQueue.main.async {
                     self.mainButton.setTitle("Creation failed", for: .normal)
                     self.errorControl.isHidden = false

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -438,14 +438,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SampleSwift/SampleSwift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XBS6WA93ZJ;
+				DEVELOPMENT_TEAM = FUBHMKB8QZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.datacom.azure-spatial-anchors-poc";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.foundry.spatialanchorsswiftsample-df";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleSwift/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -460,14 +460,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SampleSwift/SampleSwift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XBS6WA93ZJ;
+				DEVELOPMENT_TEAM = FUBHMKB8QZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.datacom.azure-spatial-anchors-poc";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.foundry.spatialanchorsswiftsample-df";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleSwift/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
