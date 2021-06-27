@@ -11,7 +11,7 @@
         <!--Menu Screen View Controller-->
         <scene sceneID="otC-47-VLp">
             <objects>
-                <viewController id="Qj7-9D-09c" userLabel="Menu Screen View Controller" sceneMemberID="viewController">
+                <viewController id="Qj7-9D-09c" userLabel="Menu Screen View Controller" customClass="MenuScreenViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pR0-hh-u4l"/>
                         <viewControllerLayoutGuide type="bottom" id="pvH-z3-Pq2"/>
@@ -68,9 +68,18 @@
                                     <segue destination="bHT-dh-isV" kind="show" id="W0n-YG-jrg"/>
                                 </connections>
                             </button>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-qQ-MP8">
+                                <rect key="frame" x="528.5" y="353" width="137" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="Udp-xL-dLN"/>
+                                    <constraint firstAttribute="height" constant="128" id="Vax-Vg-aEu"/>
+                                </constraints>
+                            </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uJd-bF-5aW" firstAttribute="top" secondItem="NcI-qQ-MP8" secondAttribute="bottom" constant="47" id="09J-Zp-gqh"/>
+                            <constraint firstItem="NcI-qQ-MP8" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="69h-rZ-d8P"/>
                             <constraint firstItem="Fgg-6E-Z19" firstAttribute="top" secondItem="uJd-bF-5aW" secondAttribute="bottom" constant="22" id="7kx-lR-q9g"/>
                             <constraint firstItem="Fgg-6E-Z19" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="CNE-Kl-f1J"/>
                             <constraint firstItem="e8d-6X-hCD" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="EOx-VV-yzc"/>
@@ -81,6 +90,9 @@
                             <constraint firstItem="uJd-bF-5aW" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="ymu-Ne-ebv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scenePreviewView1" destination="NcI-qQ-MP8" id="Q53-gH-cnr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmH-Oa-U8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

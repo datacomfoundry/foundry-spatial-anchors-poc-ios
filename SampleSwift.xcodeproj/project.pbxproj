@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		104FAE2F2687F91500D52E69 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 104FAE2E2687F91500D52E69 /* art.scnassets */; };
+		10686B1A268835E3004E21A4 /* MenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10686B19268835E3004E21A4 /* MenuScreenViewController.swift */; };
 		10F15B412682A5BB00227F82 /* LocateAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F15B402682A5BB00227F82 /* LocateAnchorViewController.swift */; };
 		173E7730225C5FF200CB32CF /* DemoStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E772F225C5FF200CB32CF /* DemoStep.swift */; };
 		17A8AE49225BC87D006DC1DB /* AnchorVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A8AE48225BC87D006DC1DB /* AnchorVisual.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0E402A8FEF9D1BF811AE8501 /* Pods-SampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleSwift/Pods-SampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 		104FAE2E2687F91500D52E69 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		10686B19268835E3004E21A4 /* MenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreenViewController.swift; sourceTree = "<group>"; };
 		10F15B402682A5BB00227F82 /* LocateAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateAnchorViewController.swift; sourceTree = "<group>"; };
 		173E772F225C5FF200CB32CF /* DemoStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoStep.swift; sourceTree = "<group>"; };
 		17A8AE48225BC87D006DC1DB /* AnchorVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorVisual.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				17C18740225BFC7500081781 /* NearbyDemoViewController.swift */,
 				7FE759DF2322CD6D00A70519 /* CoarseRelocDemoViewController.swift */,
 				10F15B402682A5BB00227F82 /* LocateAnchorViewController.swift */,
+				10686B19268835E3004E21A4 /* MenuScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				7FF5D48B232FF7D100849D92 /* SensorStatus.swift in Sources */,
 				76C862FD21F27ADD008A4362 /* AuthenticationHelper.swift in Sources */,
 				7FF5D48A232FF7CE00849D92 /* SensorStatusModel.swift in Sources */,
+				10686B1A268835E3004E21A4 /* MenuScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
