@@ -62,7 +62,8 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
     }
     
     func moveToMainMenu() {
-        self.dismiss(animated: false, completion: nil)
+        step = DemoStep.prepare
+        self.dismiss(animated: true, completion: nil)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -75,7 +76,7 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
         sceneView.delegate = self              // Set the view's delegate
         sceneView.showsStatistics = false      // Show statistics such as fps and timing information
         sceneView.scene = SCNScene()           // Create a new scene and set it on the view
-        
+
         // Main button
         mainButton = addButton()
         mainButton.addTarget(self, action:#selector(mainButtonTap), for: .touchDown)
@@ -400,7 +401,7 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
             break
         case .located:
             let anchor = args.anchor!
-            print("Cloud Anchor found! Identifier: \(anchor.identifier ?? "nil"). Location: \(BaseViewController.matrixToString(value: anchor.localAnchor.transform))")
+//            print("Cloud Anchor found! Identifier: \(anchor.identifier ?? "nil"). Location: \(BaseViewController.matrixToString(value: anchor.localAnchor.transform))")
             let visual = AnchorVisual()
             visual.cloudAnchor = anchor
             visual.identifier = anchor.identifier

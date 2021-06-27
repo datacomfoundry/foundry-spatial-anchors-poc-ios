@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qj7-9D-09c">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qj7-9D-09c">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,12 +12,16 @@
         <scene sceneID="otC-47-VLp">
             <objects>
                 <viewController id="Qj7-9D-09c" userLabel="Menu Screen View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pR0-hh-u4l"/>
+                        <viewControllerLayoutGuide type="bottom" id="pvH-z3-Pq2"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yar-zA-e4V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2oe-iy-bIq">
-                                <rect key="frame" x="94.666666666666686" y="574" width="225" height="36"/>
+                                <rect key="frame" x="484.5" y="652" width="225" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Tap to start Nearby Demo">
@@ -30,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="e8d-6X-hCD">
-                                <rect key="frame" x="102.66666666666669" y="640" width="209" height="36"/>
+                                <rect key="frame" x="492.5" y="718" width="209" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Tap to start Basic Demo">
@@ -42,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-6E-Z19" userLabel="Tap to start Coarse Reloc Demo">
-                                <rect key="frame" x="68.666666666666686" y="508" width="277" height="36"/>
+                                <rect key="frame" x="458.5" y="586" width="277" height="36"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Tap to start Coarse Reloc Demo">
@@ -54,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-bF-5aW" userLabel="Tap to start Coarse Reloc Demo">
-                                <rect key="frame" x="138.66666666666666" y="450" width="136.99999999999997" height="36"/>
+                                <rect key="frame" x="528.5" y="528" width="137" height="36"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Locate Anchors">
@@ -62,11 +65,10 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bHT-dh-isV" kind="presentation" id="klT-Dc-V7X"/>
+                                    <segue destination="bHT-dh-isV" kind="show" id="W0n-YG-jrg"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="e5z-WA-4z9"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Fgg-6E-Z19" firstAttribute="top" secondItem="uJd-bF-5aW" secondAttribute="bottom" constant="22" id="7kx-lR-q9g"/>
@@ -75,21 +77,21 @@
                             <constraint firstItem="e8d-6X-hCD" firstAttribute="top" secondItem="2oe-iy-bIq" secondAttribute="bottom" constant="30" id="Kiq-xt-asQ"/>
                             <constraint firstItem="2oe-iy-bIq" firstAttribute="top" secondItem="Fgg-6E-Z19" secondAttribute="bottom" constant="30" id="LvV-jZ-zbM"/>
                             <constraint firstItem="2oe-iy-bIq" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="oZa-yA-UbL"/>
-                            <constraint firstItem="e5z-WA-4z9" firstAttribute="bottom" secondItem="e8d-6X-hCD" secondAttribute="bottom" constant="60" id="tmX-fO-go2"/>
-                            <constraint firstItem="uJd-bF-5aW" firstAttribute="centerX" secondItem="e5z-WA-4z9" secondAttribute="centerX" id="ymu-Ne-ebv"/>
+                            <constraint firstItem="pvH-z3-Pq2" firstAttribute="top" secondItem="e8d-6X-hCD" secondAttribute="bottom" constant="60" id="tmX-fO-go2"/>
+                            <constraint firstItem="uJd-bF-5aW" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="ymu-Ne-ebv"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmH-Oa-U8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="-183"/>
+            <point key="canvasLocation" x="-290.45226130653265" y="-183.45323741007195"/>
         </scene>
         <!--Nearby Demo View Controller-->
         <scene sceneID="Lv3-3d-LVC">
             <objects>
-                <viewController id="kCF-by-l2J" customClass="NearbyDemoViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="kCF-by-l2J" customClass="NearbyDemoViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vKW-ZJ-ly1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
                     <connections>
@@ -103,9 +105,9 @@
         <!--Basic Demo View Controller-->
         <scene sceneID="5DM-Ov-SHb">
             <objects>
-                <viewController id="1PX-L6-LaT" customClass="BasicDemoViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="1PX-L6-LaT" customClass="BasicDemoViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kAy-VL-7mY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
                     <connections>
@@ -114,24 +116,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgZ-QF-y47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="759"/>
+            <point key="canvasLocation" x="1150" y="888"/>
         </scene>
         <!--Locate Anchor View Controller Scene-->
         <scene sceneID="s8U-ez-guE">
             <objects>
-                <viewController title="Locate Anchor View Controller Scene" id="bHT-dh-isV" customClass="LocateAnchorViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Locate Anchor View Controller Scene" modalPresentationStyle="fullScreen" id="bHT-dh-isV" customClass="LocateAnchorViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqJ-Rj-fgf"/>
+                        <viewControllerLayoutGuide type="bottom" id="zh8-Te-24c"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="32j-Ag-gXn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bw-7C-MG5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bw-7C-MG5">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                             </arscnView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="kQB-zp-QZJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8bw-7C-MG5" firstAttribute="leading" secondItem="32j-Ag-gXn" secondAttribute="leading" id="1PU-FA-ecD"/>
+                            <constraint firstItem="zh8-Te-24c" firstAttribute="top" secondItem="8bw-7C-MG5" secondAttribute="bottom" constant="-20" id="L5d-Bi-Fyd"/>
+                            <constraint firstAttribute="trailing" secondItem="8bw-7C-MG5" secondAttribute="trailing" id="Vkv-PH-uFK"/>
+                            <constraint firstItem="8bw-7C-MG5" firstAttribute="top" secondItem="cqJ-Rj-fgf" secondAttribute="bottom" id="rjh-hb-6tX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ISz-9S-nk3"/>
                     <connections>
                         <outlet property="sceneView" destination="8bw-7C-MG5" id="sJ5-hn-2CD"/>
                     </connections>
@@ -143,23 +154,26 @@
         <!--Coarse Reloc Demo View Controller-->
         <scene sceneID="iyv-vo-rTz">
             <objects>
-                <viewController id="AOz-z2-QZh" customClass="CoarseRelocDemoViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="AOz-z2-QZh" customClass="CoarseRelocDemoViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j5l-wc-kyl"/>
+                        <viewControllerLayoutGuide type="bottom" id="iE4-iU-K5L"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3SI-bh-7i5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxs-6U-jSo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                             </arscnView>
                             <view contentMode="topRight" horizontalHuggingPriority="750" verticalHuggingPriority="750" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-hq-ZGA" userLabel="Sensor Status" customClass="SensorStatusView" customModule="SampleSwift" customModuleProvider="target">
-                                <rect key="frame" x="264" y="0.0" width="150" height="100"/>
+                                <rect key="frame" x="1044" y="0.0" width="150" height="100"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="4LX-P4-bhu"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oEd-hq-ZGA" firstAttribute="trailing" secondItem="4LX-P4-bhu" secondAttribute="trailing" id="2ad-SH-1vj"/>
-                            <constraint firstItem="oEd-hq-ZGA" firstAttribute="top" secondItem="4LX-P4-bhu" secondAttribute="top" id="Ci6-gl-teS"/>
+                            <constraint firstItem="oEd-hq-ZGA" firstAttribute="trailing" secondItem="3SI-bh-7i5" secondAttribute="trailing" id="2ad-SH-1vj"/>
+                            <constraint firstItem="oEd-hq-ZGA" firstAttribute="top" secondItem="j5l-wc-kyl" secondAttribute="bottom" id="Ci6-gl-teS"/>
                             <constraint firstItem="rxs-6U-jSo" firstAttribute="bottom" secondItem="3SI-bh-7i5" secondAttribute="bottom" id="YeJ-L9-qCV"/>
                             <constraint firstItem="rxs-6U-jSo" firstAttribute="trailing" secondItem="3SI-bh-7i5" secondAttribute="trailing" id="aC0-QQ-XyL"/>
                             <constraint firstItem="rxs-6U-jSo" firstAttribute="top" secondItem="3SI-bh-7i5" secondAttribute="top" id="eIM-r1-DMk"/>
