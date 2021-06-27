@@ -171,8 +171,8 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
         for visual in anchorVisuals.values {
             if (visual.localAnchor == anchor) {
                 print("renderer:nodeForAnchor with local anchor \(anchor) at \(BaseViewController.matrixToString(value: anchor.transform))")
-                let scene = SCNScene(named: "art.scnassets/toy_biplane.usdz")!
-                visual.node = scene.rootNode.childNode(withName: "toy_biplane", recursively: false)
+                let scene = SCNScene(named: "art.scnassets/ship.scn")!
+                visual.node = scene.rootNode.childNode(withName: "ship", recursively: false)
                 return visual.node
             }
         }
@@ -301,6 +301,18 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
     
     func lookForAnchor() {
         let ids = [targetId!]
+        let criteria = ASAAnchorLocateCriteria()!
+        criteria.identifiers = ids
+        cloudSession!.createWatcher(criteria)
+        mainButton.setTitle("Locating Anchor ...", for: .normal)
+    }
+
+    func locateAnchorWithId(targetIds: [String]?) {
+
+        guard let ids = targetIds else {
+            return
+        }
+
         let criteria = ASAAnchorLocateCriteria()!
         criteria.identifiers = ids
         cloudSession!.createWatcher(criteria)

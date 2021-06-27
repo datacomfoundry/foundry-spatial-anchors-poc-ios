@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3BB38E1B-367B-4410-9373-0B2466E83BE3"
+            uuid = "C58208BA-ABCB-4F70-86F0-CF5BDECB5AB3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SampleSwift/ViewControllers/LocateAnchorViewController.swift"
+            filePath = "SampleSwift/ViewControllers/BaseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "mainButtonTap(sender:)"
+            startingLineNumber = "414"
+            endingLineNumber = "414"
+            landmarkName = "anchorLocated(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9B5E75E-25B4-4BF5-9100-1DCD5757D011"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleSwift/ViewControllers/BaseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
+            landmarkName = "anchorLocated(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
