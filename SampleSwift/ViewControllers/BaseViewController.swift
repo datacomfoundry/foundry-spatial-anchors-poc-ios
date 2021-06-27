@@ -171,21 +171,16 @@ class BaseViewController: UIViewController, ARSCNViewDelegate, ASACloudSpatialAn
         for visual in anchorVisuals.values {
             if (visual.localAnchor == anchor) {
                 print("renderer:nodeForAnchor with local anchor \(anchor) at \(BaseViewController.matrixToString(value: anchor.transform))")
-                let cube = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0.0)
-                if (visual.identifier != unsavedAnchorId) {
-                    cube.firstMaterial?.diffuse.contents = foundColor
-                }
-                else {
-                    cube.firstMaterial?.diffuse.contents = readyColor
-                    localAnchorCube = cube
-                }
-                visual.node = SCNNode(geometry: cube)
+                let scene = SCNScene(named: "art.scnassets/toy_biplane.usdz")!
+                visual.node = scene.rootNode.childNode(withName: "toy_biplane", recursively: false)
                 return visual.node
             }
         }
         return nil
     }
-    
+
+    //
+
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
         print(error)
