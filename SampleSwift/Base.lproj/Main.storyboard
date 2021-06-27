@@ -68,30 +68,40 @@
                                     <segue destination="bHT-dh-isV" kind="show" id="W0n-YG-jrg"/>
                                 </connections>
                             </button>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-qQ-MP8">
-                                <rect key="frame" x="528.5" y="353" width="137" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="Udp-xL-dLN"/>
-                                    <constraint firstAttribute="height" constant="128" id="Vax-Vg-aEu"/>
-                                </constraints>
-                            </sceneKitView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tuw-ZM-RKf">
+                                <rect key="frame" x="100" y="170" width="994" height="254"/>
+                                <subviews>
+                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-qQ-MP8">
+                                        <rect key="frame" x="0.0" y="0.0" width="617" height="254"/>
+                                    </sceneKitView>
+                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAK-KN-TrX">
+                                        <rect key="frame" x="617" y="0.0" width="377" height="254"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="377" id="iek-Li-Krd"/>
+                                        </constraints>
+                                    </sceneKitView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uJd-bF-5aW" firstAttribute="top" secondItem="NcI-qQ-MP8" secondAttribute="bottom" constant="47" id="09J-Zp-gqh"/>
-                            <constraint firstItem="NcI-qQ-MP8" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="69h-rZ-d8P"/>
-                            <constraint firstItem="Fgg-6E-Z19" firstAttribute="top" secondItem="uJd-bF-5aW" secondAttribute="bottom" constant="22" id="7kx-lR-q9g"/>
-                            <constraint firstItem="Fgg-6E-Z19" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="CNE-Kl-f1J"/>
-                            <constraint firstItem="e8d-6X-hCD" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="EOx-VV-yzc"/>
-                            <constraint firstItem="e8d-6X-hCD" firstAttribute="top" secondItem="2oe-iy-bIq" secondAttribute="bottom" constant="30" id="Kiq-xt-asQ"/>
-                            <constraint firstItem="2oe-iy-bIq" firstAttribute="top" secondItem="Fgg-6E-Z19" secondAttribute="bottom" constant="30" id="LvV-jZ-zbM"/>
-                            <constraint firstItem="2oe-iy-bIq" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="oZa-yA-UbL"/>
-                            <constraint firstItem="pvH-z3-Pq2" firstAttribute="top" secondItem="e8d-6X-hCD" secondAttribute="bottom" constant="60" id="tmX-fO-go2"/>
-                            <constraint firstItem="uJd-bF-5aW" firstAttribute="centerX" secondItem="yar-zA-e4V" secondAttribute="centerX" id="ymu-Ne-ebv"/>
+                            <constraint firstItem="Tuw-ZM-RKf" firstAttribute="leading" secondItem="yar-zA-e4V" secondAttribute="leading" constant="100" id="8gr-xs-WfK"/>
+                            <constraint firstItem="Tuw-ZM-RKf" firstAttribute="centerX" secondItem="2oe-iy-bIq" secondAttribute="centerX" id="91f-6v-swy"/>
+                            <constraint firstItem="e8d-6X-hCD" firstAttribute="top" secondItem="2oe-iy-bIq" secondAttribute="bottom" constant="30" id="AzV-tb-ZUU"/>
+                            <constraint firstItem="Tuw-ZM-RKf" firstAttribute="top" secondItem="pR0-hh-u4l" secondAttribute="bottom" constant="170" id="Bpf-QY-vrm"/>
+                            <constraint firstItem="2oe-iy-bIq" firstAttribute="top" secondItem="Fgg-6E-Z19" secondAttribute="bottom" constant="30" id="CvR-3h-ZOD"/>
+                            <constraint firstAttribute="trailing" secondItem="Tuw-ZM-RKf" secondAttribute="trailing" constant="100" id="XCm-Tq-FEk"/>
+                            <constraint firstAttribute="bottom" secondItem="Tuw-ZM-RKf" secondAttribute="bottom" constant="410" id="e2w-kE-YsH"/>
+                            <constraint firstItem="Tuw-ZM-RKf" firstAttribute="centerX" secondItem="Fgg-6E-Z19" secondAttribute="centerX" id="fOe-mp-ARF"/>
+                            <constraint firstItem="Fgg-6E-Z19" firstAttribute="top" secondItem="uJd-bF-5aW" secondAttribute="bottom" constant="22" id="gPT-7F-PC6"/>
+                            <constraint firstItem="uJd-bF-5aW" firstAttribute="top" secondItem="Tuw-ZM-RKf" secondAttribute="bottom" constant="104" id="kJW-KM-Cft"/>
+                            <constraint firstItem="Tuw-ZM-RKf" firstAttribute="centerX" secondItem="uJd-bF-5aW" secondAttribute="centerX" id="n9I-uu-t9L"/>
+                            <constraint firstItem="Tuw-ZM-RKf" firstAttribute="centerX" secondItem="e8d-6X-hCD" secondAttribute="centerX" id="yHv-uC-388"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="scenePreviewView1" destination="NcI-qQ-MP8" id="Q53-gH-cnr"/>
+                        <outlet property="scenePreviewView2" destination="CAK-KN-TrX" id="XGP-Ag-PWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmH-Oa-U8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
